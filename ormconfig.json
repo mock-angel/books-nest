@@ -1,7 +1,7 @@
 {
     "type": "sqlite",
     "port": 3306,
-    "database": "invoice_manager",
+    "database": "books_mulesoft",
     "entities": ["dist/**/entities/*.entity{.ts,.js}"],
     "synchronize": true,
     "autoLoadEntities": true
