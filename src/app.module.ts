@@ -10,6 +10,7 @@ import {
 import * as winston from 'winston';
 import * as DailyRotateFile from 'winston-daily-rotate-file';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { BooksModule } from './books/books.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -56,6 +57,7 @@ import configuration from './config/configuration';
       ],
     }),
     TypeOrmModule.forRoot(),
+    BooksModule,
   ],
   controllers: [AppController],
   providers: [AppService],
