@@ -17,15 +17,15 @@ async function bootstrap() {
   app.useLogger(app.get(WINSTON_MODULE_NEST_PROVIDER));
 
   const config = new DocumentBuilder()
-    .setTitle('Panchayat API')
-    .setDescription('This is an api for the Panchayat project')
+    .setTitle('Movies API')
+    .setDescription('This is an api for the Movies Mulesoft project')
     .setVersion('1.0.1')
     .setTermsOfService(
       ' This API is not affiliated with Nest, Inc.' +
       ' This API is not endorsed by Nest, Inc.' +
       ' This is API not to be used by any other party other than mock-angel and team.',
     )
-    .addServer('https://bools-mulesoft.herokuapp.com', 'localhost')
+    .addServer('https://movies-mulesoft.herokuapp.com', 'localhost')
     .addServer('http://[::1]:3060', 'localhost')
     .build();
 
@@ -44,14 +44,8 @@ async function bootstrap() {
   });
   // app.use(cookieParser());
 
-  const customOptions: SwaggerCustomOptions = {
-    swaggerOptions: {
-      persistAuthorization: true,
-    },
-  };
-
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('/docs/', app, document, customOptions);
+  SwaggerModule.setup('/docs/', app, document);
 
   MulterModule.register({
     dest: './upload',

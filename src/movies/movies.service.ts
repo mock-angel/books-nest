@@ -7,6 +7,7 @@ import { Movie } from './entities/movies.entity';
 
 @Injectable()
 export class MoviesService {
+
   constructor(
     @InjectRepository(Movie)
     private readonly moviesRepository: Repository<Movie>,
@@ -22,6 +23,10 @@ export class MoviesService {
 
   findOne(id: number) {
     return this.moviesRepository.findOne({ where: { id } });
+  }
+
+  findByActorName(actor_name: string) {
+    return this.moviesRepository.find({ where: { actor_name } });
   }
 
   update(id: number, updateMovieDto: UpdateBookDto) {
