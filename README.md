@@ -3,10 +3,23 @@
 
   <p align="center">A Books API built for <a href="" target="_blank">Mulesoft</a> test </p>
 
+## Api Playground
+View the working api docs on <a href="https://movies-mulesoft.herokuapp.com/docs">https://movies-mulesoft.herokuapp.com/docs</a>
+
 ## Description
 
 Hosted on <a href="https://movies-mulesoft.herokuapp.com">https://movies-mulesoft.herokuapp.com</a>
-View the working api docs on <a href="https://movies-mulesoft.herokuapp.com/docs">https://movies-mulesoft.herokuapp.com/docs</a>
+Api Accessible from <a href="https://movies-mulesoft.herokuapp.com/api/movies">https://movies-mulesoft.herokuapp.com/api/movies</a>
+
+API routes available:
+POST /api/movies  - to create a new movie
+GET /api/movies  - returns all movies
+GET /api/movies/{id} - returns a movie with the given id
+GET /api/by_actor_name/{actor_name} - returns movies with the actor name
+PATCHES /api/movies/{id} - updates a movie with the given id
+DELETE /api/movies/{id} - deletes a movie with the given id
+
+
 
 ## Installation
 
