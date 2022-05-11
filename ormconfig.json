@@ -1,0 +1,10 @@
+{
+    "type": "sqlite",
+    "port": 3306,
+    "username": "invoice_manager",
+    "password": "e.ga/VRbMdWBgGgo",
+    "database": "invoice_manager",
+    "entities": ["dist/**/entities/*.entity{.ts,.js}"],
+    "synchronize": true,
+    "autoLoadEntities": true
+}
