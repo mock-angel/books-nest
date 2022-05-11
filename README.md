@@ -11,15 +11,19 @@ View the working api docs on <a href="https://movies-mulesoft.herokuapp.com/docs
 Hosted on <a href="https://movies-mulesoft.herokuapp.com">https://movies-mulesoft.herokuapp.com</a>
 Api Accessible from <a href="https://movies-mulesoft.herokuapp.com/api/movies">https://movies-mulesoft.herokuapp.com/api/movies</a>
 
-API routes available:
+## API routes:
+
 POST /api/movies  - to create a new movie
+
 GET /api/movies  - returns all movies
+
 GET /api/movies/{id} - returns a movie with the given id
+
 GET /api/by_actor_name/{actor_name} - returns movies with the actor name
-PATCHES /api/movies/{id} - updates a movie with the given id
+
+PATCH /api/movies/{id} - updates a movie with the given id
+
 DELETE /api/movies/{id} - deletes a movie with the given id
-
-
 
 ## Installation
 
